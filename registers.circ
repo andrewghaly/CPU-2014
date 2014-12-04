@@ -25,7 +25,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="registers"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -58,8 +58,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
+  <circuit name="registers">
+    <a name="circuit" val="registers"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -106,6 +106,44 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(230,290)" to="(240,290)"/>
     <wire from="(230,130)" to="(240,130)"/>
     <wire from="(230,50)" to="(240,50)"/>
+    <comp lib="0" loc="(120,180)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="reg"/>
+    </comp>
+    <comp lib="4" loc="(270,130)" name="Register">
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(370,50)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="a"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(130,140)" name="Demultiplexer">
+      <a name="select" val="2"/>
+      <a name="enable" val="false"/>
+    </comp>
+    <comp lib="4" loc="(270,210)" name="Register">
+      <a name="label" val="OUT"/>
+    </comp>
+    <comp lib="0" loc="(290,350)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="clear"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="4" loc="(270,50)" name="Register">
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(370,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="b"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(130,30)" name="Pin">
       <a name="width" val="8"/>
       <a name="tristate" val="false"/>
@@ -122,28 +160,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="write"/>
     </comp>
-    <comp lib="4" loc="(270,210)" name="Register">
-      <a name="label" val="OUT"/>
-    </comp>
-    <comp lib="4" loc="(270,290)" name="Register">
-      <a name="label" val="MBR"/>
-    </comp>
-    <comp lib="0" loc="(290,350)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="clear"/>
-      <a name="labelloc" val="south"/>
-    </comp>
-    <comp lib="4" loc="(270,130)" name="Register">
-      <a name="label" val="B"/>
-    </comp>
-    <comp lib="4" loc="(270,50)" name="Register">
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="2" loc="(130,140)" name="Demultiplexer">
-      <a name="select" val="2"/>
-      <a name="enable" val="false"/>
-    </comp>
     <comp lib="0" loc="(370,290)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -151,24 +167,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="mbr"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(370,50)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="a"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(120,180)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="reg"/>
-    </comp>
-    <comp lib="0" loc="(370,130)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="b"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="4" loc="(270,290)" name="Register">
+      <a name="label" val="MBR"/>
     </comp>
   </circuit>
 </project>
